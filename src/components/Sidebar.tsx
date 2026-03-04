@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/button';
 import { MenuIcon } from 'lucide-react';
-import { navLinks } from '@/constants';
+import { navLinks, socialLinks } from '@/constants';
 import { cn } from '@/lib/utils';
 
 const Sidebar = () => {
@@ -38,7 +38,8 @@ const Sidebar = () => {
                     active == link.link && 'text-primary',
                   )}
                 >
-                  <Icon className='size-4' /> {link.label}
+                  <Icon className='size-4' />
+                  {link.label}
                 </a>
               );
             })}
@@ -46,7 +47,14 @@ const Sidebar = () => {
           <div className="mt-30">
             <p className="pb-2">socials</p>
             <div className="flex gap-3 text-neutral-500">
-              
+              {socialLinks.map((socials, i)=>{
+                const Icon = socials.icon;
+                return (
+                  <a key={i} href={socials.link} className='hover:text-primary transition-colors duration-200 border-2 border-neutral-500 rounded-full p-2 hover:border-primary'>
+                    <Icon className='size-5' />
+                  </a>
+                )
+              })}
             </div>
           </div>
         </SheetContent>

@@ -1,5 +1,17 @@
 import type { LinksType } from "@/types";
-import { Briefcase, Code, FileText, GithubIcon, Home, Mail, MessageCircle, Settings, User } from "lucide-react";
+import {
+  Briefcase,
+  Code,
+  FileText,
+  Home,
+  Mail,
+  MessageCircle,
+  Settings,
+  User
+} from 'lucide-react';
+
+import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
+
 
 const navLinks: LinksType[] = [
   { label: 'Home', link: '#hero', icon: Home },
@@ -39,24 +51,25 @@ const socialLinks: LinksType[] = [
   //   label: 'Twitter',
   //   link: '/#',
   // },
-  // {
-  //   icon: Youtube,
-  //   label: 'Youtube',
-  //   link: '/#',
-  // },
+  {
+    icon: FaYoutube,
+    label: 'Youtube',
+    link: '/#',
+  },
 
   {
-    icon: GithubIcon,
-    label: 'Twitter',
+    icon: FaGithub,
+    label: 'GitHub',
     link: '/#',
   },
   {
-    icon: Linkedin,
-    label: 'Youtube',
+    icon: FaLinkedin,
+    label: 'LinkedIn',
     link: '/#',
   },
 ];
 
 export {
  navLinks
+, socialLinks
 }

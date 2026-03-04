@@ -1,4 +1,5 @@
 import type { JSX } from 'react';
+import type { IconType } from 'react-icons';
 
 export type ProjectType = {
   imgSrc: string;
@@ -42,5 +43,5 @@ export type TestimonialsType = {
 export type LinksType = {
   label: string;
   link: string;
-  icon: React.ElementType;
+  icon: IconType;
 };
